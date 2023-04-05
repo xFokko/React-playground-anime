@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div>
-      <h1>Choose your universe</h1>
+      <h1>Descover an universe</h1>
         <div className='main__container'>
           {animeList.map((el,index)=>
           <Cards 
