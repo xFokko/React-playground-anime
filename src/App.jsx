@@ -5,6 +5,7 @@ import Cards from "./components/Cards"
 
 
 
+
 const animeList=[
   {
       name:"naruto",
@@ -39,6 +40,8 @@ function App() {
   return (
     <div>
       <h1>Descover an universe</h1>
+
+
         <div className='main__container'>
           {animeList.map((el)=>
           <Cards 
@@ -46,10 +49,8 @@ function App() {
            name={el.name}
            image={el.image}
            aura={el.flow}/>
-          )}
-      
-     
-      </div>
+            )}
+         </div>
 
     </div>
   )

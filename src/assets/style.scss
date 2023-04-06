@@ -72,8 +72,7 @@ body {
   width: 16rem;
   height: 32rem;
   perspective: 1000px;
-
-  // activation effect au hover /-----------------------------
+// /-----------------------------class pour la rotation
   .card__flip{
     transform: rotateY(180deg);
   }
