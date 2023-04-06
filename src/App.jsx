@@ -40,7 +40,7 @@ function App() {
     <div>
       <h1>Descover an universe</h1>
         <div className='main__container'>
-          {animeList.map((el,index)=>
+          {animeList.map((el)=>
           <Cards 
            key={el.name}
            name={el.name}

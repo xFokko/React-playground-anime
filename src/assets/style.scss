@@ -74,7 +74,7 @@ body {
   perspective: 1000px;
 
   // activation effect au hover /-----------------------------
-  .card__container:hover, .scene{
+  .card__flip{
     transform: rotateY(180deg);
   }
   // contenant pour pouvoir positioner cartes en absolute /-----------
