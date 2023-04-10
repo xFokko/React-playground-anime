@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt'
 
 
 
- function Cards({name, image, aura}){
+ function Cards({name, image, aura,preview,summary}){
 
     
 
@@ -25,7 +25,7 @@ import Tilt from 'react-parallax-tilt'
         <div>
              <Tilt
          glareEnable={true} 
-         glareMaxOpacity={0.8} 
+         glareMaxOpacity={0.2} 
          glareColor="#ffffff" >
           <div className="scene"data-tilt>
            <div className={`card__container ${isActive ? 'card__flip' : ''}`}>
@@ -39,7 +39,9 @@ import Tilt from 'react-parallax-tilt'
              </div>
              {/* carte 2---------------- */}
              <div className="card__face card__back" onClick={handleSwitch}>
-                <p>{name}</p>
+                <h2>{name}</h2>
+                <a href={preview}>Preview</a>
+                <div>{summary}</div>
              </div>
            </div>
           </div>

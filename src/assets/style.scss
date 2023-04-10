@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root{
+  --main-font:'Roboto','Segoe UI';
+  --back-color: #4B4A54;
+  --secondary-color:#82A0AA;
+  --third-color:#A3CFCD;
+}
 body {
+
   margin: 2rem;
     color: whitesmoke;
     background: rgb(24, 24, 24);
@@ -6,8 +15,8 @@ body {
   }
   
   h1 {
+    font-family: var(--main-font);
     text-align: center;
-    font-family: 'Roboto', sans-serif, Helvetica;
     font-size: 3rem;
     letter-spacing: 2px;
     margin-bottom: 6rem;
@@ -66,17 +75,16 @@ body {
 
 
 //  flip effect/------------------------------------------
-
-// mise en place de la scene
 .scene{
   width: 16rem;
   height: 32rem;
   perspective: 1000px;
-// /-----------------------------class pour la rotation
+
+// classe à ajouter pour la rotation /----------------------------
   .card__flip{
     transform: rotateY(180deg);
-  }
-  // contenant pour pouvoir positioner cartes en absolute /-----------
+   }
+   // contenant pour pouvoir positioner recto et verso en absolute
     .card__container{
     position: relative;
     width: 100%;
@@ -85,7 +93,7 @@ body {
     transition: transform 1.5s;
     transform-style: preserve-3d;
 
-   // dimension et positionement carte
+   //dimension et positionement carte-----------------------------
     .card__face {
       position: absolute;
       width: 100%;
@@ -95,12 +103,32 @@ body {
     }
     // style dos de la carte
     .card__back {
-      background: rgb(44, 39, 39);
+      background: var(--back-color);
       transform: rotateY( 180deg );
-      border: 0.5px solid rgb(75, 67, 67);
+      border: 0.5px solid #4B4A54;
       border-radius: 8px;
-    }
+      cursor: default;
+      
+      h2{
+        letter-spacing: 1px;
+        font-family: var(--main-font)
+      }
+      a {
+        text-decoration: none;
+        color: var(--secondary-color);
+      }
+      a:hover{
+        border-top: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+      }
+      div{
+        margin: 0.5rem;
+        line-height: 1.5rem;
+      }
+     }
+   }
   }
-  }
+  
+
 
 
